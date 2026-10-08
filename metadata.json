@@ -1,0 +1,6 @@
+{
+  "name": "Slots & Daggers: Retro Crawl",
+  "description": "復古地城拉霸 Roguelike 遊戲：目押判定、三連擊 Jackpot 與輪盤構築戰鬥",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

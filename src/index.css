@@ -1,0 +1,141 @@
+@import "tailwindcss";
+
+@layer utilities {
+  @keyframes floatFade {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, 10px) scale(0.8);
+    }
+    20% {
+      opacity: 1;
+      transform: translate(-50%, -5px) scale(1.15);
+    }
+    80% {
+      opacity: 1;
+      transform: translate(-50%, -20px) scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: translate(-50%, -35px) scale(0.9);
+    }
+  }
+
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20% { transform: translateX(-4px) rotate(-1deg); }
+    40% { transform: translateX(4px) rotate(1deg); }
+    60% { transform: translateX(-3px); }
+    80% { transform: translateX(3px); }
+  }
+
+  /* Symbol Animations */
+  @keyframes bladeSway {
+    0%, 100% { transform: rotate(0deg) scale(1); }
+    50% { transform: rotate(6deg) scale(1.05); }
+  }
+
+  @keyframes shieldPulse {
+    0%, 100% { transform: scale(1); filter: drop-shadow(0 2px 4px rgba(59,130,246,0.5)); }
+    50% { transform: scale(1.06); filter: drop-shadow(0 0 10px rgba(96,165,250,0.8)); }
+  }
+
+  @keyframes coinSpin {
+    0%, 100% { transform: scaleX(1); }
+    50% { transform: scaleX(0.2) scaleY(1.05); }
+  }
+
+  @keyframes potionSlosh {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-4deg); }
+    75% { transform: rotate(4deg); }
+  }
+
+  @keyframes bubbleRise {
+    0% { transform: translateY(0); opacity: 0; }
+    50% { opacity: 0.9; }
+    100% { transform: translateY(-12px); opacity: 0; }
+  }
+
+  @keyframes skullWobble {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-3px) rotate(-3deg); }
+  }
+
+  @keyframes lightningFlicker {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    30% { opacity: 0.8; transform: scale(1.08) rotate(2deg); }
+    60% { opacity: 1; transform: scale(0.96) rotate(-2deg); }
+  }
+
+  @keyframes bloodPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.12); }
+  }
+
+  @keyframes bombBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-2px); }
+  }
+
+  .animate-float-fade {
+    animation: floatFade 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .animate-shake {
+    animation: shake 0.35s ease-in-out;
+  }
+
+  .animate-blade-sway {
+    animation: bladeSway 2s ease-in-out infinite;
+  }
+
+  .animate-shield-pulse {
+    animation: shieldPulse 2.4s ease-in-out infinite;
+  }
+
+  .animate-coin-spin {
+    animation: coinSpin 2.5s ease-in-out infinite;
+  }
+
+  .animate-potion-slosh {
+    animation: potionSlosh 2.8s ease-in-out infinite;
+  }
+
+  .animate-bubble-rise-1 {
+    animation: bubbleRise 1.6s ease-in infinite;
+  }
+  .animate-bubble-rise-2 {
+    animation: bubbleRise 1.9s ease-in infinite 0.4s;
+  }
+  .animate-bubble-rise-3 {
+    animation: bubbleRise 2.2s ease-in infinite 0.8s;
+  }
+
+  .animate-skull-wobble {
+    animation: skullWobble 2.6s ease-in-out infinite;
+  }
+
+  .animate-lightning-flicker {
+    animation: lightningFlicker 1.4s ease-in-out infinite;
+  }
+
+  .animate-blood-pulse {
+    animation: bloodPulse 1.2s ease-in-out infinite;
+  }
+
+  .animate-bomb-bounce {
+    animation: bombBounce 1.5s ease-in-out infinite;
+  }
+
+  /* Scanlines overlay for retro CRT monitor feel (isolated overlay) */
+  .crt-scanlines {
+    background: linear-gradient(
+      rgba(18, 16, 16, 0) 50%,
+      rgba(0, 0, 0, 0.32) 50%
+    );
+    background-size: 100% 4px;
+    box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.7);
+    pointer-events: none;
+  }
+}
+
